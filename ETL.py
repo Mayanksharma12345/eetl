@@ -443,3 +443,31 @@ def delete_input_file(filename: str, user=Depends(require_permissions(Permission
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to delete file: {e}")
+
+
+if __name__ == "__main__":
+
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    start = time.time()
+
+    files_processed = 0
+
+    for f in os.listdir(INPUT_DIR):
+
+        if f.lower().endswith(".xlsx"):
+
+            res = process_single_file(os.path.join(INPUT_DIR, f), run_id)
+
+            if res.get("success"):
+
+                print(f"✅ Processed {f}: {res['rows']} rows in {res['elapsed']}s")
+
+                files_processed += 1
+
+            else:
+
+                print(f"❌ Failed {f}: {res['error']}")
+
+    print(f"\nFinished run {run_id} — {files_processed} file(s) processed in {round(time.time() - start, 2)}s")
+
