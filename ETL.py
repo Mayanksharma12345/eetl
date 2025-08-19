@@ -464,7 +464,6 @@ if __name__ == "__main__":
                 print(f"✅ Processed {f}: {res['rows']} rows in {res['elapsed']}s")
 
                 files_processed += 1
-
             else:
 
                 print(f"❌ Failed {f}: {res['error']}")
