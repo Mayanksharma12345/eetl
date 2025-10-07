@@ -1,0 +1,3 @@
+Bill ID	Batch Type	Payment Channel	Payment Method	Practice Location	Posted Date	Business Unit	Location	Primary Provider	Supervising Provider	Service Date	CPT/Product	Payment Amount	Charges	Claim ID
+Bill ID	Primary Provider	Adjustments	CPT/Product	Financial Category	Patient MRN	Patient Name	Payer	Posted Date	Transaction Date	Claim ID	Business Unit	UID	
+Charge Count	CPT/Product	Service Date	Charges	Bill Link	Bill ID	Activity Type	Business Unit	Claim ID	CPT/Product Description	Patient MRN	Payer	Posted Date	Practice Location	Primary Provider	Transaction Date	Supervising Provider	Location	Coverage Type
